@@ -1,0 +1,46 @@
+Source: serp
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Miguel Landaeta <miguel@miguel.cc>, Stephen Nelson <stephen@eccostudio.com>
+Section: java
+Priority: optional
+Build-Depends: debhelper (>= 9), cdbs, default-jdk, maven-debian-helper (>= 1.5)
+Build-Depends-Indep: libmaven-javadoc-plugin-java, junit (>= 3.8.1)
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-java/serp.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-java/serp.git
+Homepage: http://serp.sourceforge.net
+
+Package: libserp-java
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: libserp-java-doc (= ${binary:Version})
+Description: Java Virtual Machine bytecode manipulation framework
+ The goal of the serp bytecode framework is to tap the full power of bytecode
+ modification while lowering its associated costs.
+ .
+ The framework provides a set of high-level APIs for manipulating all aspects
+ of bytecode, from large-scale structures like class member fields to the
+ individual instructions that comprise the code of methods.
+ .
+ While in order to perform any advanced manipulation, some understanding of the
+ class file format and especially of the JVM instruction set is necessary, the
+ framework makes it as easy as possible to enter the world of bytecode
+ development.
+
+Package: libserp-java-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Suggests: libserp-java (= ${binary:Version})
+Description: Documentation for libserp-java
+ Documentation of the serp bytecode framework that has as goal to tap the full
+ power of bytecode modification while lowering its associated costs.
+ .
+ The framework provides a set of high-level APIs for manipulating all aspects
+ of bytecode, from large-scale structures like class member fields to the
+ individual instructions that comprise the code of methods.
+ .
+ While in order to perform any advanced manipulation, some understanding of the
+ class file format and especially of the JVM instruction set is necessary, the
+ framework makes it as easy as possible to enter the world of bytecode
+ development.
